@@ -1,0 +1,158 @@
+{
+  "name": "integration-test-plugin",
+  "version": "1.0.0",
+  "description": "A Theia plugin for integration testing of VSCode APIs.",
+  "keywords": [
+    "theia",
+    "plugin",
+    "integration-test",
+    "api-testing"
+  ],
+  "main": "lib/extension.js",
+  "typings": "lib/extension.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "test-configs",
+    "test-report.json"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vscode": "^1.1.37"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "rimraf": "latest",
+    "@types/node": "latest",
+    "@types/vscode": "^1.60.0"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "integrationTestPlugin.runAllTests",
+        "title": "🧪 Run Integration Tests",
+        "category": "Test",
+        "icon": "$(play)"
+      },
+      {
+        "command": "integrationTestPlugin.clearReport",
+        "title": "🗑️ Clear Test Report",
+        "category": "Test",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "integrationTestPlugin.showSummary",
+        "title": "📊 Show Test Summary",
+        "category": "Test",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "integrationTestPlugin.triggerRegisteredCommand",
+        "title": "🎯 Trigger First Registered Command",
+        "category": "Test",
+        "icon": "$(zap)"
+      },
+      {
+        "command": "integrationTestPlugin.triggerSecondRegisteredCommand",
+        "title": "🎯 Trigger Second Registered Command",
+        "category": "Test",
+        "icon": "$(zap)"
+      },
+      {
+        "command": "integrationTestPlugin.verifyWebviewProvider",
+        "title": "🔍 Verify Webview Panel",
+        "category": "Test",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "integrationTestPlugin.openWebviewPanel",
+        "title": "📱 Open Webview Panel",
+        "category": "Test",
+        "icon": "$(preview)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "integrationTestPlugin.runAllTests"
+        },
+        {
+          "command": "integrationTestPlugin.clearReport"
+        },
+        {
+          "command": "integrationTestPlugin.showSummary"
+        },
+        {
+          "command": "integrationTestPlugin.triggerRegisteredCommand"
+        },
+        {
+          "command": "integrationTestPlugin.triggerSecondRegisteredCommand"
+        },
+        {
+          "command": "integrationTestPlugin.verifyWebviewProvider"
+        },
+        {
+          "command": "integrationTestPlugin.openWebviewPanel"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "integrationTestPlugin.runAllTests",
+          "group": "navigation@1",
+          "when": "resourceExtname == '.json' && resourceFilename =~ /.*test.*/"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "integrationTestPlugin.runAllTests",
+          "group": "test",
+          "when": "explorerResourceIsFolder || (resourceExtname == '.json' && resourceFilename =~ /.*test.*/)"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "integrationTestPlugin.runAllTests",
+          "group": "navigation@1",
+          "when": "view == workbench.explorer.fileView"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "integrationTestPlugin.runAllTests",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t"
+      }
+    ],
+    "views": {
+      "test": [
+        {
+          "id": "integrationTestView",
+          "name": "Integration Tests",
+          "when": "true"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "integrationTest",
+          "title": "Integration Test",
+          "icon": "$(beaker)"
+        }
+      ]
+    }
+  }
+}

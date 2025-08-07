@@ -1,0 +1,76 @@
+[
+  {
+    "name": "VSCode: 显示信息消息",
+    "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+    "method": ["vscode", "window", "showInformationMessage"],
+    "input": "来自集成测试插件的问候！",
+    "timeout_ms": 5000
+  },
+  {
+    "name": "VSCode: 注册第一个命令",
+    "description": "注册第一个触发预定义回调的新 VS Code 命令",
+    "method": ["vscode", "commands", "registerCommand"],
+    "input": [
+      "integrationTestPlugin.testCommand",
+      { "_callbackRef": "vscodeCommandCallback" }
+    ],
+    "timeout_ms": 3000
+  },
+  {
+    "name": "VSCode: 注册第二个命令",
+    "description": "注册第二个触发预定义回调的新 VS Code 命令",
+    "method": ["vscode", "commands", "registerCommand"],
+    "input": [
+      "integrationTestPlugin.secondTestCommand",
+      { "_callbackRef": "secondVscodeCommandCallback" }
+    ],
+    "timeout_ms": 3000
+  },
+  {
+    "name": "VSCode: 创建 Webview 面板",
+    "description": "使用 createWebviewPanel 创建 webview 面板并保存为动态引用",
+    "method": ["vscode", "window", "createWebviewPanel"],
+    "input": [
+      "integrationTestPanel",
+      "🧪 Integration Test Panel",
+      1,
+      {
+        "enableScripts": true,
+        "retainContextWhenHidden": true
+      }
+    ],
+    "_saveAsRef": "createdPanel",
+    "timeout_ms": 5000
+  },
+  {
+    "name": "VSCode: 设置 Webview 面板HTML内容",
+    "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+    "method": ["_dynamicRef", "createdPanel", "webview", "html", "_set"],
+    "input": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+    "timeout_ms": 3000
+  },
+  {
+    "name": "VSCode: 设置 Webview 消息处理器",
+    "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+    "method": ["_dynamicRef", "createdPanel", "webview", "onDidReceiveMessage"],
+    "input": [{ "_callbackRef": "webviewMessageHandler" }],
+    "timeout_ms": 3000
+  },
+  {
+    "name": "VSCode: 创建状态栏项",
+    "description": "创建一个新的状态栏项",
+    "method": ["vscode", "window", "createStatusBarItem"],
+    "input": [1, 100],
+    "timeout_ms": 2000
+  },
+  {
+    "name": "VSCode: 注册树数据提供者",
+    "description": "注册一个树数据提供者",
+    "method": ["vscode", "window", "registerTreeDataProvider"],
+    "input": [
+      "integrationTestPlugin.testTreeView",
+      { "_instanceRef": "mockTreeDataProvider" }
+    ],
+    "timeout_ms": 5000
+  }
+]

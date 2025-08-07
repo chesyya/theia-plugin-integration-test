@@ -1,0 +1,623 @@
+{
+  "title": "Theia Integration Test Report",
+  "created": "2025-08-07T13:34:42.821Z",
+  "sessions": [
+    {
+      "session_id": "session_1754573672816",
+      "session_name": "集成测试会话 - 2025/8/7 21:34:42",
+      "start_time": "2025-08-07T13:34:42.821Z",
+      "end_time": "2025-08-07T13:34:42.852Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T13:34:42.821Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 10000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754573672816"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:34:42.850Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754573672816"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:34:42.850Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754573672816"
+        },
+        {
+          "name": "VSCode: 注册 Webview 视图提供者",
+          "description": "使用真实的 WebviewViewProvider 注册一个 webview 视图提供者",
+          "method_chain": "vscode.window.registerWebviewViewProvider",
+          "timestamp": "2025-08-07T13:34:42.851Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754573672816"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T13:34:42.851Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:0290ed78-58ce-4fd4-86ae-d1ef78ac1807"
+          },
+          "session_id": "session_1754573672816"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T13:34:42.852Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754573672816"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "success": 5,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754574224201",
+      "session_name": "集成测试会话 - 2025/8/7 21:43:49",
+      "start_time": "2025-08-07T13:43:49.207Z",
+      "end_time": "2025-08-07T13:43:49.247Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T13:43:49.207Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754574224201"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:43:49.244Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574224201"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:43:49.245Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574224201"
+        },
+        {
+          "name": "VSCode: 注册 Webview 视图提供者",
+          "description": "使用真实的 WebviewViewProvider 注册一个 webview 视图提供者",
+          "method_chain": "vscode.window.registerWebviewViewProvider",
+          "timestamp": "2025-08-07T13:43:49.245Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574224201"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T13:43:49.246Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:61a35fb4-3fad-40da-9ce9-c9e053cc2113"
+          },
+          "session_id": "session_1754574224201"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T13:43:49.247Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754574224201"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "success": 5,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754574798537",
+      "session_name": "集成测试会话 - 2025/8/7 21:53:23",
+      "start_time": "2025-08-07T13:53:23.542Z",
+      "end_time": "2025-08-07T13:53:23.582Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T13:53:23.542Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754574798537"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:53:23.580Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754574798537"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T13:53:23.580Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574798537"
+        },
+        {
+          "name": "VSCode: 注册 Webview 视图提供者",
+          "description": "使用真实的 WebviewViewProvider 注册一个 webview 视图提供者",
+          "method_chain": "vscode.window.registerWebviewViewProvider",
+          "timestamp": "2025-08-07T13:53:23.581Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574798537"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T13:53:23.582Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:280488c8-c921-4193-acd8-e44d5fe071ee"
+          },
+          "session_id": "session_1754574798537"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T13:53:23.582Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754574798537"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "success": 5,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754575307006",
+      "session_name": "集成测试会话 - 2025/8/7 22:01:52",
+      "start_time": "2025-08-07T14:01:52.024Z",
+      "end_time": "2025-08-07T14:01:52.049Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:01:52.015Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754575307006"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:01:52.046Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754575307006"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:01:52.047Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754575307006"
+        },
+        {
+          "name": "VSCode: 注册 Webview 视图提供者",
+          "description": "使用真实的 WebviewViewProvider 注册一个 webview 视图提供者",
+          "method_chain": "vscode.window.registerWebviewViewProvider",
+          "timestamp": "2025-08-07T14:01:52.047Z",
+          "status": "FAILURE",
+          "message": "View provider for 'integrationTestPlugin.testWebviewView' already registered",
+          "duration_ms": 0,
+          "session_id": "session_1754575307006"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:01:52.048Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:a50e3e90-ce2c-414c-b9ef-052011aa3f64"
+          },
+          "session_id": "session_1754575307006"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:01:52.049Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754575307006"
+        }
+      ],
+      "summary": {
+        "total": 6,
+        "success": 4,
+        "failed": 2
+      }
+    },
+    {
+      "session_id": "session_1754575863610",
+      "session_name": "📅 集成测试会话 - 2025/8/7 22:11:08",
+      "start_time": "2025-08-07T14:11:08.612Z",
+      "end_time": "2025-08-07T14:11:08.639Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:11:08.612Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754575863610"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:11:08.636Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754575863610"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:11:08.637Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754575863610"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:11:08.639Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:9736c6f6-68b2-4c67-aa97-e2641ec8ed0c"
+          },
+          "session_id": "session_1754575863610"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:11:08.639Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754575863610"
+        }
+      ],
+      "summary": {
+        "total": 5,
+        "success": 4,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754575878756",
+      "session_name": "📅 集成测试会话 - 2025/8/7 22:11:23",
+      "start_time": "2025-08-07T14:11:23.763Z",
+      "end_time": "2025-08-07T14:11:23.774Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:11:23.762Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754575878756"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:11:23.765Z",
+          "status": "FAILURE",
+          "message": "Command integrationTestPlugin.testCommand already exist",
+          "duration_ms": 0,
+          "session_id": "session_1754575878756"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:11:23.769Z",
+          "status": "FAILURE",
+          "message": "Command integrationTestPlugin.secondTestCommand already exist",
+          "duration_ms": 0,
+          "session_id": "session_1754575878756"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:11:23.772Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:5199ffc0-3f07-4853-bf29-f24caaad70ca"
+          },
+          "session_id": "session_1754575878756"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:11:23.774Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754575878756"
+        }
+      ],
+      "summary": {
+        "total": 5,
+        "success": 2,
+        "failed": 3
+      }
+    },
+    {
+      "session_id": "session_1754576594014",
+      "session_name": "📅 集成测试会话 - 2025/8/7 22:23:19",
+      "start_time": "2025-08-07T14:23:19.022Z",
+      "end_time": "2025-08-07T14:23:19.051Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:23:19.021Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:23:19.034Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:23:19.043Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:23:19.044Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-07T14:23:19.045Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:23:19.046Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:33ddc281-560f-409d-b9c1-a580f009d6e5"
+          },
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:23:19.046Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-07T14:23:19.048Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:23:19.049Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-07T14:23:19.050Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "session_id": "session_1754576594014"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-07T14:23:19.051Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754576594014"
+        }
+      ],
+      "summary": {
+        "total": 11,
+        "success": 10,
+        "failed": 1
+      }
+    }
+  ],
+  "overall_summary": {
+    "total_sessions": 1,
+    "total_tests": 45,
+    "total_success": 35,
+    "total_failed": 10,
+    "lastUpdated": "2025-08-07T14:23:19.051Z"
+  }
+}
