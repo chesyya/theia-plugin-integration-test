@@ -31,6 +31,7 @@
 
 ```json
 {
+  "id": "测试用例的唯一序号",
   "name": "测试用例的描述性名称",
   "description": "对该测试作用的更详细解释。",
   "method": ["rootObject", "level1", "level2", "functionName"],
@@ -38,6 +39,7 @@
 }
 ```
 
+-   `id`: **新增字段。** 测试用例的唯一标识符，通常建议使用 `文件名前缀-序号` 的格式（例如 `plc-001`），以便于追溯和报告对应。此 ID 将在测试报告中体现。
 -   `name`: 测试用例的简洁名称。
 -   `description`: 测试目的的详细描述。
 -   `method`: 表示调用链的字符串数组。第一个元素将是根对象（例如，“plc”、“baosky”、“vscode”），后跟嵌套属性，最后是要调用的函数名称。例如，`["plc", "a", "b", "func"]` 将转换为 `plc.a.b.func()`。
@@ -99,6 +101,7 @@
 
 -   **文件创建/追加：** 如果 `test-report.json` 不存在，它将被创建。如果它存在，新的测试结果将追加到其 `testResults` 数组中。
 -   **报告结构：** `testResults` 数组中的每个条目将包括：
+    -   `id`: **新增字段。** 测试用例的唯一标识符，与配置文件中的 `id` 对应。
     -   `name`: 来自测试配置。
     -   `description`: 来自测试配置。
     -   `method_chain`: 被调用的完整方法链（例如，`plc.a.b.func`）。
@@ -121,6 +124,7 @@
 
 ```json
   {
+    "id": "vscode-001",
     "name": "VSCode: 显示信息消息",
     "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息。",
     "method": ["vscode", "window", "showInformationMessage"],
@@ -136,6 +140,7 @@
 
 ```json
   {
+    "id": "vscode-002",
     "name": "VSCode: 注册命令",
     "description": "注册一个触发预定义回调的新 VS Code 命令。",
     "method": ["vscode", "commands", "registerCommand"],
@@ -157,6 +162,7 @@
 
 ```json
   {
+    "id": "vscode-003",
     "name": "VSCode: 注册 Webview 视图提供者",
     "description": "使用预定义的模拟实例注册一个 webview 视图提供者。",
     "method": ["vscode", "window", "registerWebviewViewProvider"],

@@ -611,13 +611,765 @@
         "success": 10,
         "failed": 1
       }
+    },
+    {
+      "session_id": "session_1754577845185",
+      "session_name": "📅 集成测试会话 - 2025/8/7 22:44:10",
+      "start_time": "2025-08-07T14:44:10.194Z",
+      "end_time": "2025-08-07T14:44:14.137Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:44:10.193Z",
+          "status": "FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:44:10.223Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:44:10.224Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:44:10.226Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-07T14:44:10.227Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:44:10.228Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:6c719bd8-3482-4cc4-a05e-014c968c35c3"
+          },
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:44:10.229Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-07T14:44:10.232Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:44:10.234Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-07T14:44:10.235Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "session_id": "session_1754577845185"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-07T14:44:14.136Z",
+          "status": "SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 3900,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754577845185"
+        }
+      ],
+      "summary": {
+        "total": 11,
+        "success": 10,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754578474139",
+      "session_name": "📅 集成测试会话 - 2025/8/7 22:54:39",
+      "start_time": "2025-08-07T14:54:39.146Z",
+      "end_time": "2025-08-07T14:54:39.192Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-07T14:54:39.146Z",
+          "status": "❌ FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:54:39.179Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-07T14:54:39.180Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:54:39.182Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-07T14:54:39.183Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-07T14:54:39.184Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:f00bdab3-d108-497e-b436-53f72329f918"
+          },
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-07T14:54:39.185Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-07T14:54:39.188Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-07T14:54:39.190Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-07T14:54:39.191Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "session_id": "session_1754578474139"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-07T14:54:39.192Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754578474139"
+        }
+      ],
+      "summary": {
+        "total": 11,
+        "success": 10,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754611544850",
+      "session_name": "📅 集成测试会话 - 2025/8/8 08:05:49",
+      "start_time": "2025-08-08T00:05:49.858Z",
+      "end_time": "2025-08-08T00:05:49.906Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-08T00:05:49.857Z",
+          "status": "❌ FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:05:49.890Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:05:49.892Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:05:49.895Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-08T00:05:49.896Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-08T00:05:49.897Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:3f0eaf1f-0cd3-4d22-9dd9-7693fea73f4e"
+          },
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-08T00:05:49.898Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-08T00:05:49.901Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:05:49.903Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-08T00:05:49.904Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "session_id": "session_1754611544850"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-08T00:05:49.906Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754611544850"
+        }
+      ],
+      "summary": {
+        "total": 11,
+        "success": 10,
+        "failed": 1
+      }
+    },
+    {
+      "session_id": "session_1754611623859",
+      "session_name": "📅 集成测试会话 - 2025/8/8 08:07:08",
+      "start_time": "2025-08-08T00:07:08.866Z",
+      "end_time": "2025-08-08T00:07:08.891Z",
+      "results": [
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-08T00:07:08.866Z",
+          "status": "❌ FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:07:08.867Z",
+          "status": "❌ FAILURE",
+          "message": "Command integrationTestPlugin.testCommand already exist",
+          "duration_ms": 0,
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:07:08.876Z",
+          "status": "❌ FAILURE",
+          "message": "Command integrationTestPlugin.secondTestCommand already exist",
+          "duration_ms": 0,
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:07:08.880Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-08T00:07:08.881Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-08T00:07:08.883Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:628ea7ec-f658-4cd9-95e6-925efed72678"
+          },
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-08T00:07:08.884Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-08T00:07:08.887Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 1,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:07:08.888Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-08T00:07:08.890Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "session_id": "session_1754611623859"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-08T00:07:08.891Z",
+          "status": "✅ SUCCESS",
+          "message": "Test executed successfully",
+          "duration_ms": 0,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754611623859"
+        }
+      ],
+      "summary": {
+        "total": 11,
+        "success": 8,
+        "failed": 3
+      }
+    },
+    {
+      "session_id": "session_1754613144352",
+      "session_name": "📅 集成测试会话 - 2025/8/8 08:32:27",
+      "start_time": "2025-08-08T00:32:27.360Z",
+      "end_time": "2025-08-08T00:32:32.429Z",
+      "results": [
+        {
+          "name": "无验证测试",
+          "description": "没有设置expectedResult，执行成功即为成功",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-08T00:32:27.358Z",
+          "status": "❌ FAILURE",
+          "message": "Test execution failed: Test timed out after 3000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "实例方法调用验证",
+          "description": "调用WebviewPanel的reveal方法并验证执行成功",
+          "method_chain": "_dynamicRef.validationPanel.reveal",
+          "timestamp": "2025-08-08T00:32:27.388Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Undefined validation passed ",
+          "duration_ms": 0,
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "函数调用验证测试",
+          "description": "验证回调函数能够被正确调用",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:32:27.389Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Instance method called successfully (Disposable.dispose) ",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "复杂对象属性验证",
+          "description": "验证创建的状态栏项的多个属性",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-08T00:32:27.391Z",
+          "status": "❌ FAILURE",
+          "message": "❌ Expected instance of StatusBarItem, got: StatusBarItemImpl ",
+          "duration_ms": 0,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 50,
+            "_id": "plugin-status-bar-item:59aeb8fd-6464-481a-ac8b-83316d92d21c"
+          },
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "设置状态栏文本验证",
+          "description": "设置状态栏文本并验证设置成功",
+          "method_chain": "_dynamicRef.statusItem.text._set",
+          "timestamp": "2025-08-08T00:32:27.394Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 1,
+          "raw_result": "🧪 验证测试状态",
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "获取状态栏文本验证",
+          "description": "获取状态栏文本并验证内容正确",
+          "method_chain": "_dynamicRef.statusItem.text._get",
+          "timestamp": "2025-08-08T00:32:27.395Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 0,
+          "raw_result": "🧪 验证测试状态",
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 显示信息消息",
+          "description": "使用 vscode.window.showInformationMessage 显示一个简单的信息消息",
+          "method_chain": "vscode.window.showInformationMessage",
+          "timestamp": "2025-08-08T00:32:32.399Z",
+          "status": "❌ FAILURE",
+          "message": "Test execution failed: Test timed out after 5000ms",
+          "duration_ms": 0,
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 注册第一个命令",
+          "description": "注册第一个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:32:32.404Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Instance validation passed (Disposable) ",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 注册第二个命令",
+          "description": "注册第二个触发预定义回调的新 VS Code 命令",
+          "method_chain": "vscode.commands.registerCommand",
+          "timestamp": "2025-08-08T00:32:32.413Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Instance validation passed (Disposable) ",
+          "duration_ms": 1,
+          "raw_result": {},
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 设置 Webview 面板HTML内容",
+          "description": "通过动态引用设置刚创建的webview面板的HTML内容",
+          "method_chain": "_dynamicRef.createdPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:32:32.417Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Integration Test Panel</title><style>body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 15px; background: var(--vscode-editor-background); color: var(--vscode-editor-foreground); margin: 0; } .header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid var(--vscode-panel-border); padding-bottom: 15px; } .status-card { margin: 10px 0; padding: 12px; background: var(--vscode-textBlockQuote-background); border-left: 4px solid var(--vscode-textLink-foreground); border-radius: 4px; } .button-group { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; } button { padding: 10px 15px; background: var(--vscode-button-background); color: var(--vscode-button-foreground); border: none; border-radius: 4px; cursor: pointer; font-size: 13px; transition: background-color 0.2s; } button:hover { background: var(--vscode-button-hoverBackground); } .success-btn { background: #1e7e34; } .warning-btn { background: #e0a800; } .error-btn { background: #dc3545; } .run-btn { background: #007acc; font-weight: bold; }</style></head><body><div class=\"header\"><h2>🧪 Integration Test Panel</h2><p>✅ WebviewPanel 创建成功！HTML内容通过测试链动态设置</p></div><div class=\"status-card\">📋 这是通过测试链设置的HTML内容：<br>1. 使用 createWebviewPanel 创建面板<br>2. 保存panel为动态引用<br>3. 通过动态引用设置 panel.webview.html（当前步骤）<br>4. 通过动态引用设置消息处理器</div><div class=\"button-group\"><button class=\"run-btn\" onclick=\"runTests()\">🚀 运行集成测试</button><button onclick=\"sendMessage()\">📱 发送普通消息</button><button class=\"success-btn\" onclick=\"showSuccess()\">✅ 显示成功消息</button><button class=\"warning-btn\" onclick=\"showWarning()\">⚠️ 显示警告消息</button><button class=\"error-btn\" onclick=\"showError()\">❌ 显示错误消息</button></div><script>const vscode = acquireVsCodeApi(); function sendMessage() { vscode.postMessage({ command: 'alert', text: 'Hello from WebviewPanel! 通过测试链设置的内容！' }); } function showSuccess() { vscode.postMessage({ command: 'showSuccess', text: 'WebviewPanel 成功消息测试！' }); } function showWarning() { vscode.postMessage({ command: 'showWarning', text: 'WebviewPanel 警告消息测试！' }); } function showError() { vscode.postMessage({ command: 'showError', text: 'WebviewPanel 错误消息测试！' }); } function runTests() { vscode.postMessage({ command: 'runTests' }); }</script></body></html>",
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 设置 Webview 消息处理器",
+          "description": "通过动态引用为webview设置消息处理器以处理用户交互",
+          "method_chain": "_dynamicRef.createdPanel.webview.onDidReceiveMessage",
+          "timestamp": "2025-08-08T00:32:32.418Z",
+          "status": "❌ FAILURE",
+          "message": "❌ Expected instance of Disposable, got: Object ",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 创建状态栏项",
+          "description": "创建一个新的状态栏项",
+          "method_chain": "vscode.window.createStatusBarItem",
+          "timestamp": "2025-08-08T00:32:32.420Z",
+          "status": "❌ FAILURE",
+          "message": "❌ Expected instance of StatusBarItem, got: StatusBarItemImpl ",
+          "duration_ms": 1,
+          "raw_result": {
+            "_proxy": {},
+            "_alignment": 1,
+            "_priority": 100,
+            "_id": "plugin-status-bar-item:5a5c5600-15ed-4097-92bf-be7e964ebea2"
+          },
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "VSCode: 注册树数据提供者",
+          "description": "注册一个树数据提供者",
+          "method_chain": "vscode.window.registerTreeDataProvider",
+          "timestamp": "2025-08-08T00:32:32.421Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Instance validation passed (Disposable) ",
+          "duration_ms": 0,
+          "raw_result": {},
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "步骤2: 设置Panel标题",
+          "description": "通过动态对象引用设置WebviewPanel的title属性",
+          "method_chain": "_dynamicRef.testPanel.title._set",
+          "timestamp": "2025-08-08T00:32:32.424Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 0,
+          "raw_result": "🎯 Updated Panel Title via Dynamic Reference",
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "步骤3: 设置Panel HTML内容",
+          "description": "通过动态对象引用设置webview的HTML内容",
+          "method_chain": "_dynamicRef.testPanel.webview.html._set",
+          "timestamp": "2025-08-08T00:32:32.426Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 0,
+          "raw_result": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "步骤4: 显示Panel",
+          "description": "通过动态对象引用调用reveal方法显示面板",
+          "method_chain": "_dynamicRef.testPanel.reveal",
+          "timestamp": "2025-08-08T00:32:32.427Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Undefined validation passed ",
+          "duration_ms": 0,
+          "session_id": "session_1754613144352"
+        },
+        {
+          "name": "步骤5: 获取Panel类型",
+          "description": "通过动态对象引用访问viewType属性验证Panel对象",
+          "method_chain": "_dynamicRef.testPanel.viewType._get",
+          "timestamp": "2025-08-08T00:32:32.428Z",
+          "status": "✅ SUCCESS",
+          "message": "✅ Value validation passed ",
+          "duration_ms": 0,
+          "raw_result": "dynamicTestPanel",
+          "session_id": "session_1754613144352"
+        }
+      ],
+      "summary": {
+        "total": 17,
+        "success": 12,
+        "failed": 5
+      }
     }
   ],
   "overall_summary": {
     "total_sessions": 1,
-    "total_tests": 45,
-    "total_success": 35,
-    "total_failed": 10,
-    "lastUpdated": "2025-08-07T14:23:19.051Z"
+    "total_tests": 106,
+    "total_success": 85,
+    "total_failed": 21,
+    "lastUpdated": "2025-08-08T00:32:32.429Z"
   }
 }

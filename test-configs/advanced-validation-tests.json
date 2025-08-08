@@ -1,0 +1,103 @@
+[
+  {
+    "id": "AV001",
+    "name": "无验证测试",
+    "description": "没有设置expectedResult，执行成功即为成功",
+    "method": ["vscode", "window", "showInformationMessage"],
+    "input": "这是无验证测试",
+    "timeout_ms": 3000
+  },
+  {
+    "id": "AV002", 
+    "name": "对象属性验证测试",
+    "description": "验证返回对象的多个属性值",
+    "method": ["vscode", "window", "createWebviewPanel"],
+    "input": [
+      "testPanel",
+      "验证测试面板",
+      1,
+      {"enableScripts": true}
+    ],
+    "_saveAsRef": "validationPanel",
+    "timeout_ms": 5000,
+    "expectedResult": {
+      "type": "instance",
+      "instanceOf": "WebviewPanel",
+      "instanceProperty": {
+        "propertyPath": ["viewType"],
+        "expectedValue": "testPanel"
+      }
+    }
+  },
+  {
+    "id": "AV003",
+    "name": "实例方法调用验证",
+    "description": "调用WebviewPanel的reveal方法并验证执行成功",
+    "method": ["_dynamicRef", "validationPanel", "reveal"],
+    "input": [2],
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "undefined"
+    }
+  },
+  {
+    "id": "AV004",
+    "name": "函数调用验证测试",
+    "description": "验证回调函数能够被正确调用",
+    "method": ["vscode", "commands", "registerCommand"],
+    "input": [
+      "testValidationCommand",
+      {"_callbackRef": "vscodeCommandCallback"}
+    ],
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "instance",
+      "instanceOf": "Disposable",
+      "instanceMethod": {
+        "methodName": "dispose",
+        "args": []
+      }
+    }
+  },
+  {
+    "id": "AV005",
+    "name": "复杂对象属性验证",
+    "description": "验证创建的状态栏项的多个属性",
+    "method": ["vscode", "window", "createStatusBarItem"],
+    "input": [1, 50],
+    "_saveAsRef": "statusItem",
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "instance",
+      "instanceOf": "StatusBarItem",
+      "instanceProperty": {
+        "propertyPath": ["alignment"],
+        "expectedValue": 1
+      }
+    }
+  },
+  {
+    "id": "AV006",
+    "name": "设置状态栏文本验证",
+    "description": "设置状态栏文本并验证设置成功",
+    "method": ["_dynamicRef", "statusItem", "text", "_set"],
+    "input": "🧪 验证测试状态",
+    "timeout_ms": 2000,
+    "expectedResult": {
+      "type": "value",
+      "value": "🧪 验证测试状态"
+    }
+  },
+  {
+    "id": "AV007",
+    "name": "获取状态栏文本验证",
+    "description": "获取状态栏文本并验证内容正确",
+    "method": ["_dynamicRef", "statusItem", "text", "_get"],
+    "input": [],
+    "timeout_ms": 2000,
+    "expectedResult": {
+      "type": "value",
+      "value": "🧪 验证测试状态"
+    }
+  }
+]

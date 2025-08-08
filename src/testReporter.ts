@@ -33,7 +33,7 @@ export class TestReporter {
             if (existingReport) {
                 // 查找现有会话或创建新会话
                 let currentSession = existingReport.sessions.find(s => s.session_id === sessionId);
-                
+
                 if (!currentSession) {
                     // 创建新会话
                     currentSession = {
@@ -50,11 +50,11 @@ export class TestReporter {
                 // 添加测试结果到会话
                 currentSession.results.push(testResult);
                 currentSession.end_time = now;
-                
+
                 // 更新会话摘要
                 currentSession.summary.total = currentSession.results.length;
-                currentSession.summary.success = currentSession.results.filter(r => r.status === 'SUCCESS').length;
-                currentSession.summary.failed = currentSession.results.filter(r => r.status === 'FAILURE').length;
+                currentSession.summary.success = currentSession.results.filter(r => r.status === '✅ SUCCESS').length;
+                currentSession.summary.failed = currentSession.results.filter(r => r.status === '❌ FAILURE').length;
 
                 // 更新总体摘要
                 existingReport.overall_summary.total_tests = existingReport.sessions.reduce((acc, s) => acc + s.summary.total, 0);
@@ -74,8 +74,8 @@ export class TestReporter {
                     results: [testResult],
                     summary: {
                         total: 1,
-                        success: testResult.status === 'SUCCESS' ? 1 : 0,
-                        failed: testResult.status === 'FAILURE' ? 1 : 0
+                        success: testResult.status === '✅ SUCCESS' ? 1 : 0,
+                        failed: testResult.status === '❌ FAILURE' ? 1 : 0
                     }
                 };
 
@@ -86,8 +86,8 @@ export class TestReporter {
                     overall_summary: {
                         total_sessions: 1,
                         total_tests: 1,
-                        total_success: testResult.status === 'SUCCESS' ? 1 : 0,
-                        total_failed: testResult.status === 'FAILURE' ? 1 : 0,
+                        total_success: testResult.status === '✅ SUCCESS' ? 1 : 0,
+                        total_failed: testResult.status === '❌ FAILURE' ? 1 : 0,
                         lastUpdated: now
                     }
                 };
@@ -96,7 +96,7 @@ export class TestReporter {
             }
 
             console.log(`Single test result added to report: ${testResult.name} - ${testResult.status}`);
-            
+
         } catch (error: any) {
             throw new Error(`Failed to add single test result: ${error.message}`);
         }
@@ -120,7 +120,7 @@ export class TestReporter {
             const now = new Date().toISOString();
             const sessionId = `session_${Date.now()}`;
             const sessionName = `集成测试会话 - ${new Date().toLocaleString('zh-CN')}`;
-            
+
             // 为所有测试结果添加会话ID
             const resultsWithSession = testResults.map(result => ({
                 ...result,
@@ -135,8 +135,8 @@ export class TestReporter {
                 results: resultsWithSession,
                 summary: {
                     total: testResults.length,
-                    success: testResults.filter(r => r.status === 'SUCCESS').length,
-                    failed: testResults.filter(r => r.status === 'FAILURE').length
+                    success: testResults.filter(r => r.status === '✅ SUCCESS').length,
+                    failed: testResults.filter(r => r.status === '❌ FAILURE').length
                 }
             };
 
@@ -162,12 +162,12 @@ export class TestReporter {
 
             // Write report to file
             fs.writeFileSync(this.reportFilePath, JSON.stringify(report, null, 2));
-            
+
             console.log(`Test report generated at: ${this.reportFilePath}`);
             console.log(`Session: ${sessionName}`);
             console.log(`This session - Total: ${newSession.summary.total}, Success: ${newSession.summary.success}, Failed: ${newSession.summary.failed}`);
             console.log(`Overall - Sessions: ${report.overall_summary.total_sessions}, Total tests: ${report.overall_summary.total_tests}`);
-            
+
         } catch (error: any) {
             throw new Error(`Failed to generate test report: ${error.message}`);
         }
@@ -188,7 +188,7 @@ export class TestReporter {
         try {
             const content = fs.readFileSync(this.reportFilePath, 'utf8');
             const report: TestReport = JSON.parse(content);
-            
+
             // 只显示最新会话的统计，而不是所有会话的累计
             if (report.sessions && report.sessions.length > 0) {
                 const latestSession = report.sessions[report.sessions.length - 1];
@@ -199,7 +199,7 @@ export class TestReporter {
                     sessions: report.overall_summary.total_sessions
                 };
             }
-            
+
             return {
                 total: 0,
                 success: 0,

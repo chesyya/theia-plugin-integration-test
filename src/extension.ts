@@ -36,10 +36,10 @@ export async function activate(context: vscode.ExtensionContext) {
         try {
             const sessionId = `session_${Date.now()}`;
             vscode.window.showInformationMessage('🚀 开始执行集成测试...');
-            
+
             let completedCount = 0;
             let totalTests = 0;
-            
+
             // 先计算总测试数
             const files = fs.readdirSync(testConfigsDir).filter((file: string) => file.endsWith('.json'));
             for (const file of files) {
@@ -54,20 +54,20 @@ export async function activate(context: vscode.ExtensionContext) {
                 // 单个测试完成的回调
                 async (result: TestResult) => {
                     completedCount++;
-                    
+
                     // 立即写入报告
                     await testReporter.addSingleTestResult(result, sessionId);
-                    
+
                     // 刷新视图
                     testViewProvider.refresh();
-                    
+
                     // 显示单个测试结果，带更丰富的图标和格式
-                    const statusIcon = result.status === 'SUCCESS' ? '✅' : '❌';
+                    const statusIcon = result.status === '✅ SUCCESS' ? '✅' : '❌';
                     const durationText = result.duration_ms > 0 ? ` (${result.duration_ms}ms)` : '';
                     const progressText = `[${completedCount}/${totalTests}]`;
-                    
+
                     let message: string;
-                    if (result.status === 'SUCCESS') {
+                    if (result.status === '✅ SUCCESS') {
                         message = `${statusIcon} ${progressText} ${result.name}${durationText}`;
                         vscode.window.showInformationMessage(message);
                     } else {
@@ -83,16 +83,16 @@ export async function activate(context: vscode.ExtensionContext) {
                     vscode.window.showInformationMessage(`${progressIcon} 正在执行: ${testName}...`);
                 }
             );
-            
+
             // 显示最终结果，更丰富的图标和格式
             const summary = testReporter.getReportSummary();
             if (summary) {
                 const successRate = Math.round((summary.success / summary.total) * 100);
                 const finalIcon = summary.failed === 0 ? '🎉' : (summary.success > summary.failed ? '⚠️' : '💔');
                 const statsIcon = '📊';
-                
+
                 const message = `${finalIcon} 测试完成！${statsIcon} Sessions: ${summary.sessions || 0}, 总计: ${summary.total}, 成功: ${summary.success}✅, 失败: ${summary.failed}❌ (成功率: ${successRate}%)`;
-                
+
                 if (summary.failed === 0) {
                     vscode.window.showInformationMessage(message);
                 } else {
@@ -101,7 +101,7 @@ export async function activate(context: vscode.ExtensionContext) {
             } else {
                 vscode.window.showInformationMessage('🎉 集成测试执行完毕，报告已生成。');
             }
-            
+
         } catch (error: any) {
             vscode.window.showErrorMessage(`❌ 集成测试执行出错: ${error.message}`);
             console.error('Integration test error:', error);

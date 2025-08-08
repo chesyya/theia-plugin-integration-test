@@ -1,5 +1,6 @@
 [
   {
+    "id": "WP001",
     "name": "步骤1: 创建WebviewPanel",
     "description": "使用 createWebviewPanel 创建面板，并保存为动态引用以供后续测试使用",
     "method": ["vscode", "window", "createWebviewPanel"],
@@ -13,34 +14,57 @@
       }
     ],
     "_saveAsRef": "testPanel",
-    "timeout_ms": 5000
+    "timeout_ms": 5000,
+    "expectedResult": {
+      "type": "instance",
+      "instanceOf": "WebviewPanel"
+    }
   },
   {
+    "id": "WP002",
     "name": "步骤2: 设置Panel标题",
     "description": "通过动态对象引用设置WebviewPanel的title属性",
     "method": ["_dynamicRef", "testPanel", "title", "_set"],
     "input": "🎯 Updated Panel Title via Dynamic Reference",
-    "timeout_ms": 3000
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "value",
+      "value": "🎯 Updated Panel Title via Dynamic Reference"
+    }
   },
   {
+    "id": "WP003",
     "name": "步骤3: 设置Panel HTML内容",
     "description": "通过动态对象引用设置webview的HTML内容",
     "method": ["_dynamicRef", "testPanel", "webview", "html", "_set"],
     "input": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>",
-    "timeout_ms": 3000
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "value",
+      "value": "<!DOCTYPE html><html><head><title>Dynamic Panel</title><style>body{font-family: Arial; padding: 20px; background: #f0f0f0;} .card{background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);} .success{color: #28a745; font-weight: bold;}</style></head><body><div class='card'><h2>🔗 Dynamic WebviewPanel</h2><p class='success'>✅ 这个HTML内容是通过动态对象引用设置的！</p><p>📋 测试流程：</p><ol><li>创建WebviewPanel并保存为动态引用</li><li>通过引用修改panel.title</li><li>通过引用设置panel.webview.html（当前步骤）</li><li>通过引用调用panel.reveal()</li><li>通过引用获取panel.viewType</li></ol><p><strong>🎉 动态对象引用系统工作正常！</strong></p></div></body></html>"
+    }
   },
   {
+    "id": "WP004",
     "name": "步骤4: 显示Panel",
     "description": "通过动态对象引用调用reveal方法显示面板",
     "method": ["_dynamicRef", "testPanel", "reveal"],
     "input": [1],
-    "timeout_ms": 3000
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "undefined"
+    }
   },
   {
+    "id": "WP005",
     "name": "步骤5: 获取Panel类型",
     "description": "通过动态对象引用访问viewType属性验证Panel对象",
     "method": ["_dynamicRef", "testPanel", "viewType", "_get"],
     "input": [],
-    "timeout_ms": 3000
+    "timeout_ms": 3000,
+    "expectedResult": {
+      "type": "value",
+      "value": "dynamicTestPanel"
+    }
   }
 ]
